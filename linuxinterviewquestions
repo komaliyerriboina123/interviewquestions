@@ -1,0 +1,56 @@
+1) What kind of Linux machines are you using in your project?
+
+Answer: RHEL (Red Hat Enterprise Linux)
+
+2) How to display Linux version?
+
+cat /etc/os-release or lsb_release -a
+
+3) How to display Kernel version?
+
+uname -r or uname -a
+
+4) How to display all the running processes in Linux OS?
+
+ps -ef
+
+Realtime
+
+top
+
+5) What is a Zombie process in Linux?
+
+A zombie process is a process that has finished execution but still remains in the process table because the parent process has not collected its exit status.
+
+6) How to kill a running process in Linux?
+
+Answer:kill <PID>
+
+Force kill:kill -9 <PID>
+
+By name:pkill process_name
+
+7) How to display the files which are 30 days old in Linux machine?
+
+Answer:find /path -type f -mtime +30
+
+8) How to delete all the files which are 30 days old in Linux machine?
+
+Answer:find /path -type f -mtime +30 -delete
+
+9) What is the difference between find and locate?
+
+Answer:
+
+find searches files in real time and is slower but accurate
+
+locate searches from a database, very fast but may show outdated results
+
+
+10) How to display all the users who belong to a group?
+
+Answer: getent group groupname
+ or
+ grep groupname /etc/group
+
+
