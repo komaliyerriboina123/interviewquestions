@@ -150,3 +150,60 @@ OpenShift is an enterprise Kubernetes platform with built-in security, CI/CD, an
 
 Kubernetes helps us run containerized applications in a highly available, scalable, and production-ready manner.
 
+22) In our project we have OpenShift. If we select you, how will you contribute to our project?
+
+Answer:
+I can contribute by managing OpenShift resources such as Deployments, Services, Routes, ConfigMaps, and Secrets. I can automate deployments using CI/CD pipelines, handle rolling updates, troubleshoot pod and networking issues, manage RBAC and security contexts, and ensure high availability and performance of applications running on OpenShift.
+
+23) What challenges have you faced in Kubernetes?
+
+Answer:
+Common challenges I faced include pod crash issues, image pull errors, resource limits causing OOMKilled, networking and DNS issues, misconfigured services/ingress, and handling persistent storage for stateful applications. These were resolved using logs, events, proper resource tuning, and configuration fixes.
+
+24) Which version of Kubernetes is used in your project?
+
+Answer:
+We are using Kubernetes 1.27+ (managed service), ensuring compatibility with the latest features and security patches.
+(Adjust version if interviewer asks specifically.)
+
+25) How are you monitoring the Kubernetes cluster?
+
+Answer:
+We monitor the cluster using Prometheus for metrics, Grafana for dashboards, and Alertmanager for alerts. Application logs are collected using ELK/EFK stack for troubleshooting.
+
+26) Can you explain what Helm is?
+
+Answer:
+Helm is a package manager for Kubernetes used to deploy and manage applications using reusable templates called Helm charts, making deployments consistent and configurable across environments.
+
+27) How are you doing Auto Scaling in Kubernetes?
+
+Answer:
+We use Horizontal Pod Autoscaler (HPA) to automatically scale pods based on CPU, memory, or custom metrics.
+
+28) What is the difference between Kubernetes Auto Scaling and AWS Auto Scaling?
+
+Answer:
+
+Kubernetes Auto Scaling: Scales pods inside the cluster (HPA, VPA)
+
+AWS Auto Scaling: Scales EC2 nodes (infrastructure level)
+Both work together in managed services like EKS.
+
+29) What is Metrics Server in Kubernetes?
+
+Answer:
+Metrics Server collects resource usage data (CPU, memory) from nodes and pods, which is required for Horizontal Pod Autoscaler to work.
+
+30) What is the difference between Deployment and StatefulSet?
+
+Answer:
+
+Deployment: Used for stateless applications, pods are interchangeable
+
+StatefulSet: Used for stateful applications, provides stable network identity and persistent storage
+
+⭐ Strong Interview Closing Line:
+
+I focus on stability, automation, and scalability while ensuring secure and efficient Kubernetes/OpenShift operations.
+
