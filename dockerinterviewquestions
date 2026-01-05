@@ -162,3 +162,12 @@ Containers are created using Docker Compose or automated CI/CD pipelines.
 Answer:
 Docker Swarm is Docker’s native container orchestration tool used to manage and scale containers across multiple nodes.
 
+21) What is the difference between Stateless container and Stateful container?
+
+Answer:
+A stateless container does not store any data inside the container. If the container restarts or is recreated, no data is lost because the state is maintained externally. Stateless containers are easy to scale and are commonly used for application and API services.
+
+A stateful container stores or depends on persistent data. If the container restarts, the data must be retained using volumes or persistent storage. Stateful containers are typically used for databases, messaging systems, and storage services.
+
+In real-time projects, application services are stateless, while databases and messaging systems are stateful.
+
