@@ -1,0 +1,28 @@
+1) What is an Artifact Repository?
+
+Answer:
+An artifact repository is a centralized storage system used to store, version, and manage build artifacts such as JARs, WARs, Docker images, and Helm charts.
+
+2) Why are you using Nexus Repository in the project?
+
+Answer:
+We use Nexus to store and manage build artifacts, improve build performance through caching, maintain version control, and ensure secure and reliable artifact delivery across environments.
+
+3) What is snapshot repository and release repository?
+
+Answer:
+
+Snapshot repository stores artifacts under active development and allows frequent updates
+
+Release repository stores stable, immutable artifacts used for production deployments
+
+4) Do you have a Remote Repository for the project?
+
+Answer:
+Yes, we configure remote repositories to proxy external repositories like Maven Central or Docker Hub, reducing external dependency downloads and improving build reliability.
+
+5) How do you secure your remote repository?
+
+Answer:
+Remote repositories are secured using role-based access control (RBAC), authentication, SSL/TLS, firewall restrictions, and by restricting anonymous access and enforcing credentials for uploads.
+
