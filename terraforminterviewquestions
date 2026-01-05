@@ -1,0 +1,55 @@
+1) What is Terraform and why do we need to use it?
+
+Answer:
+Terraform is an Infrastructure as Code (IaC) tool used to provision and manage cloud resources using code. We use Terraform to automate infrastructure creation, maintain consistency across environments, enable version control, reduce manual errors, and easily recreate or scale infrastructure.
+
+2) Could you please show one Terraform script (by sharing your screen)?
+
+Answer (explain verbally in interview):
+Yes. I’ll show a simple Terraform script that creates an EC2 instance in AWS.
+
+provider "aws" {
+  region = "ap-south-1"
+}
+
+resource "aws_instance" "web" {
+  ami           = "ami-0abcdef12345"
+  instance_type = "t2.micro"
+  key_name      = "my-key"
+
+  tags = {
+    Name = "terraform-ec2"
+  }
+}
+
+
+Explanation:
+
+Provider defines AWS
+
+Resource block creates EC2
+
+Terraform manages lifecycle (create, update, destroy)
+
+3) Which resources have you created in AWS using Terraform?
+
+Answer:
+Using Terraform, I have created:
+
+EC2 instances
+
+VPC, Subnets, Route Tables
+
+Security Groups
+
+Load Balancers (ALB)
+
+Auto Scaling Groups
+
+IAM roles and policies
+
+S3 buckets
+
+EKS cluster and node groups
+
+All resources are managed through Terraform state and reused across environments like dev, QA, and prod.
