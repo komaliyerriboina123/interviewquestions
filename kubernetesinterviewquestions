@@ -1,0 +1,152 @@
+1) What is Kubernetes and why do we need it?
+
+Answer:
+Kubernetes is a container orchestration platform used to deploy, scale, and manage containerized applications. We need it to handle auto-scaling, self-healing, load balancing, and zero-downtime deployments in production environments.
+
+2) Explain Kubernetes architecture and its components
+
+Answer:
+Kubernetes follows a master–worker architecture.
+
+Master components: API Server, Scheduler, Controller Manager, etcd
+
+Worker components: Kubelet, Kube-proxy, Container Runtime
+The master manages the cluster, and worker nodes run application pods.
+
+3) Which Kubernetes cluster are you using in your project?
+
+Answer:
+We are using a managed Kubernetes service (AWS EKS) for better scalability, security, and reduced operational overhead.
+
+4) What is Pod life cycle in Kubernetes?
+
+Answer:
+Pod lifecycle includes phases like Pending → Running → Succeeded/Failed → Terminated. Kubernetes automatically recreates pods if they fail.
+
+5) What is a Static Pod?
+
+Answer:
+A static pod is managed directly by the kubelet, not by the API server. These pods are mainly used for control plane components.
+
+6) Why do we need Namespaces in Kubernetes?
+
+Answer:
+Namespaces are used to logically isolate resources, manage access control, and organize environments like dev, QA, and prod within the same cluster.
+
+7) What services are available in Kubernetes and differences?
+
+Answer:
+
+ClusterIP: Internal communication
+
+NodePort: Exposes service on node IP
+
+LoadBalancer: Exposes service using cloud LB
+
+Headless Service: Direct pod access
+We use LoadBalancer or Ingress for external access.
+
+8) How are you deploying your project in Kubernetes?
+
+Answer:
+We deploy applications using Deployment manifests, container images from a registry, and expose them using Service and Ingress.
+
+9) Who is responsible for writing Kubernetes manifest YAML?
+
+Answer:
+DevOps engineers write and maintain Kubernetes manifests in collaboration with developers.
+
+10) Write a sample Kubernetes Deployment YAML
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: myapp
+  template:
+    metadata:
+      labels:
+        app: myapp
+    spec:
+      containers:
+      - name: app
+        image: myapp:latest
+        ports:
+        - containerPort: 8080
+
+11) What is the purpose of Labels and Selectors?
+
+Answer:
+Labels are key-value pairs used to identify resources, and selectors are used by services and deployments to select matching pods.
+
+12) Which deployment strategy are you following?
+
+Answer:
+We use Rolling Update strategy to ensure zero downtime during application deployments.
+
+13) What is Ingress in Kubernetes?
+
+Answer:
+Ingress manages external HTTP/HTTPS access to services and provides features like SSL termination and path-based routing.
+
+14) Where have you configured your project domain?
+
+Answer:
+The domain is configured in Route53 (DNS) and mapped to the Ingress LoadBalancer.
+
+15) Can you open and show your project in Google?
+
+Answer:
+Yes, once the domain is mapped to the Ingress and DNS is configured, the application is accessible publicly via browser.
+
+16) How do you check container logs?
+
+Answer:
+
+kubectl logs pod-name
+
+
+For a specific container:
+
+kubectl logs pod-name -c container-name
+
+17) Database pod started but tables are not created – how to troubleshoot?
+
+Answer:
+Check container logs, verify environment variables, initialization scripts, mounted volumes, and ensure the DB init script is configured correctly.
+
+18) How do you check DB tables created or not?
+
+Answer:
+By exec into the pod:
+
+kubectl exec -it pod-name -- bash
+
+
+Then log into the database and check tables.
+
+19) How is application deployed in cluster in your project?
+
+Answer:
+Code → Git → Jenkins builds Docker image → push to registry → Kubernetes Deployment updates → Rolling update happens automatically.
+
+20) What is Headless Service?
+
+Answer:
+A Headless Service does not assign a ClusterIP and allows direct pod-to-pod communication, mainly used with StatefulSets.
+
+21) Difference between Kubernetes and OpenShift?
+
+Answer:
+
+Kubernetes is an open-source orchestration platform
+
+OpenShift is an enterprise Kubernetes platform with built-in security, CI/CD, and developer tools
+
+⭐ Strong Interview Closing Line:
+
+Kubernetes helps us run containerized applications in a highly available, scalable, and production-ready manner.
+
