@@ -1,0 +1,164 @@
+1) What is the difference between Virtualization and Containerization?
+
+Answer:
+Virtualization uses a hypervisor to run multiple OS instances on hardware, while containerization runs applications in isolated containers sharing the same OS kernel, making containers lighter and faster.
+
+2) Why do we need to go for Containerization?
+
+Answer:
+To ensure application portability, faster deployments, consistency across environments, and efficient resource utilization.
+
+3) Which version of Docker are you using in your project?
+
+Answer:
+We are using Docker 24.x (Docker CE).
+(You can adjust the version if needed.)
+
+4) Can you explain what a Dockerfile is?
+
+Answer:
+A Dockerfile is a text file containing instructions to build a Docker image, such as base image, dependencies, environment variables, and startup commands.
+
+5) Write a Dockerfile to deploy a Spring Boot application
+
+FROM openjdk:17-jdk-slim
+WORKDIR /app
+COPY target/app.jar app.jar
+EXPOSE 8080
+ENTRYPOINT ["java","-jar","app.jar"]
+
+6) What is the difference between CMD and ENTRYPOINT?
+
+Answer:
+
+CMD provides default arguments and can be overridden
+
+ENTRYPOINT defines the main executable and cannot be easily overridden
+
+7) How do you build a Docker image?
+
+docker build -t springboot-app .
+
+8) What will be there inside a Docker image?
+
+Answer:
+Base OS layer, application binaries, dependencies, libraries, environment variables, and metadata.
+
+9) How will you set Docker image privileges?
+
+Answer:
+By running containers with limited privileges using:
+
+docker run --user 1001 --cap-drop ALL
+and avoiding --privileged unless required.
+
+10) How do you compress a Docker image?
+docker save image_name | gzip > image.tar.gz
+
+11) Why do we need Docker Compose?
+
+Answer:
+Docker Compose is used to manage multi-container applications using a single YAML file.
+
+12) Write a sample Docker Compose file
+
+Answer:
+A Dockerfile is a text file containing instructions to build a Docker image, such as base image, dependencies, environment variables, and startup commands.
+
+5) Write a Dockerfile to deploy a Spring Boot application
+
+FROM openjdk:17-jdk-slim
+WORKDIR /app
+COPY target/app.jar app.jar
+EXPOSE 8080
+ENTRYPOINT ["java","-jar","app.jar"]
+
+6) What is the difference between CMD and ENTRYPOINT?
+
+Answer:
+
+CMD provides default arguments and can be overridden
+
+ENTRYPOINT defines the main executable and cannot be easily overridden
+
+7) How do you build a Docker image?
+
+docker build -t springboot-app .
+
+8) What will be there inside a Docker image?
+
+Answer:
+Base OS layer, application binaries, dependencies, libraries, environment variables, and metadata.
+
+9) How will you set Docker image privileges?
+
+Answer:
+By running containers with limited privileges using:
+
+docker run --user 1001 --cap-drop ALL
+
+
+and avoiding --privileged unless required.
+
+10) How do you compress a Docker image?
+
+Answer:
+
+docker save image_name | gzip > image.tar.gz
+
+11) Why do we need Docker Compose?
+
+Answer:
+Docker Compose is used to manage multi-container applications using a single YAML file.
+
+12) Write a sample Docker Compose file
+version: '3'
+services:
+  app:
+    image: springboot-app
+    ports:
+      - "8080:8080"
+
+13) How do you attach a Docker volume to a container?
+
+Answer:
+
+docker run -v /host/data:/container/data image_name
+14) How do you see logs of a container?
+
+Answer:
+
+docker logs container_id
+
+15) Why do we need Docker Network?
+
+Answer:
+Docker networks allow secure communication between containers and provide isolation.
+
+16) Docker commands you have used?
+
+Answer:
+docker build, docker run, docker ps, docker images, docker logs, docker exec, docker stop, docker rm, docker rmi
+
+17) Where are you maintaining your project Docker images?
+
+Answer:
+We store Docker images in Docker Hub / AWS ECR / Nexus Repository.
+
+18) How do you upload a Docker image?
+
+Answer:
+
+docker tag image repo/image
+docker push repo/image
+
+19) How are Docker containers created in your project?
+
+Answer:
+Containers are created using Docker Compose or automated CI/CD pipelines.
+
+20) What is Docker Swarm?
+
+Answer:
+Docker Swarm is Docker’s native container orchestration tool used to manage and scale containers across multiple nodes.
+
