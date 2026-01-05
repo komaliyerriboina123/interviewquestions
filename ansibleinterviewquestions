@@ -1,0 +1,78 @@
+1) What is the purpose of Ansible?
+
+Answer:
+Ansible is a configuration management and automation tool used to automate application deployment, server configuration, and infrastructure provisioning in a simple, agentless manner.
+
+2) What is Host Inventory?
+
+Answer:
+Host inventory is a file that defines managed nodes (hosts), groups, IP addresses, and variables that Ansible uses to run playbooks.
+
+3) Explain a few ad-hoc commands in Ansible
+
+Answer:
+Ad-hoc commands are one-line commands used for quick tasks:
+
+ansible all -m ping
+ansible all -m yum -a "name=git state=present"
+ansible all -m shell -a "uptime"
+
+4) What is a Playbook?
+
+Answer:
+A playbook is a YAML file that contains a set of plays and tasks defining how Ansible should configure and manage hosts.
+
+5) Write a sample playbook to install git on all host nodes
+
+---
+- name: Install git on all hosts
+  hosts: all
+  become: yes
+  tasks:
+    - name: Install git package
+      yum:
+        name: git
+        state: present
+6) What is a Handler in playbook?
+
+Answer:
+A handler is a special task that runs only when notified by another task, commonly used to restart services after configuration changes.
+
+7) What is a tag and why do we need it?
+
+Answer:
+Tags allow you to run specific tasks or plays selectively instead of executing the entire playbook.
+
+ansible-playbook playbook.yml --tags install
+
+8) What modules have you used in Ansible playbooks?
+
+Answer:
+Commonly used modules include:
+yum, apt, copy, template, service, file, shell, command, user, group, git, docker_container.
+
+9) How do you secure playbooks?
+
+Answer:
+By using Ansible Vault to encrypt sensitive data, restricting file permissions, using SSH keys, and avoiding hardcoded credentials.
+
+10) Why do we need to create Ansible Roles?
+
+Answer:
+Roles help organize playbooks, promote reusability, and maintain clean, modular, and scalable Ansible code.
+
+11) What is Register module in Ansible?
+
+Answer:
+register is used to store the output of a task into a variable, which can be reused in later tasks.
+- command: uptime
+  register: uptime_output
+In AWS we have User Data to execute scripts while launching a machine. Then why do we need Ansible?
+
+Answer:
+12) AWS User Data is used for one-time initialization of an EC2 instance, such as installing packages or basic configuration during launch. However, it is not suitable for ongoing configuration management.
+
+Ansible is used to continuously manage, update, and maintain configurations across multiple servers. It is idempotent, reusable, easy to modify, and can be executed anytime after the server is running.
+
+In real-time projects, User Data is used for initial bootstrap, and Ansible is used for configuration management, application deployment, patching, and scaling.
+
