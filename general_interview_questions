@@ -1,0 +1,56 @@
+
+1) What is DevOps and why we need it?
+
+DevOps is a culture and set of practices that combines Development and Operations to deliver applications faster and more reliably. We need DevOps to reduce deployment time, automate manual tasks, improve collaboration, and ensure continuous delivery with better stability.
+
+2) Which methodology you are following in your project?
+
+We are following Agile methodology with Scrum. Work is divided into sprints, and we follow daily stand-ups, sprint planning, sprint review, and retrospective meetings.
+
+3) How will you get the daily task?
+
+Daily tasks are assigned during daily stand-up calls and tracked using JIRA. Sometimes tasks also come through emails or direct discussion with the team lead based on priority.
+
+4) What is your team size?
+
+Our team size is around 8–10 members, including developers, QA, DevOps engineers, and a Scrum Master/Project Manager.
+
+5) Did you ever interact with the client?
+
+Yes, I interacted with clients during production issues, deployment discussions, and requirement clarifications, usually through calls or emails along with my lead or manager.
+
+6) When was the last retrospective meeting happened in your project?
+
+We conduct retrospective meetings at the end of every sprint, typically once in 2 weeks.
+
+7) Can you explain any mistake you have done in the project and how your manager reacted?
+
+Once, I deployed a configuration change without validating it in lower environments, which caused a minor issue. I immediately informed my manager, rolled back the change, and fixed it properly. My manager appreciated the transparency and guided me to follow proper validation going forward.
+
+8) Why do you want to change the company?
+
+I want to move into a role where I can work more deeply on DevOps engineering, automation, cloud, and Kubernetes. I’m looking for better learning opportunities, real-time challenges, and long-term career growth.
+
+9) If I select you in this interview, how will you help in my project?
+
+I will help by automating CI/CD pipelines, improving deployment stability, managing cloud infrastructure, troubleshooting issues quickly, and following DevOps best practices to improve delivery speed and reliability.
+
+10) If everything is already configured in the project, how will you add value to the team?
+
+Even if everything is configured, I can add value by optimizing pipelines, improving monitoring, enhancing security, reducing deployment time, documenting processes, and supporting the team during incidents.
+
+11) What is your notice period, how soon can you join?
+
+My notice period is [mention yours here, e.g., 30 days / negotiable], and I can join as per company requirements.
+
+12) We are done, do you have any questions for us?
+
+Yes, I have a few questions:
+
+What DevOps tools are currently used in the project?
+
+What are the immediate expectations from this role?
+
+Is there scope to work on cloud and Kubernetes enhancements?
+
+
