@@ -1,0 +1,53 @@
+1) What is branching strategy in GitHub?
+
+Answer:
+A branching strategy defines how branches are created, used, and merged. Common strategies include Git Flow, Feature Branching, and Trunk-Based Development to manage development, testing, and releases safely.
+
+2) What is a Pull Request in GitHub?
+
+Answer:
+A Pull Request (PR) is a request to merge changes from one branch into another, usually from a feature branch to main. It allows code review, discussion, and approval before merging.
+
+3) What is the difference between Merge and Rebase commands?
+
+Answer:
+
+Merge combines branches and creates a merge commit, preserving history
+
+Rebase moves commits to a new base, creating a clean and linear history
+
+4) What is Git Bisect command?
+
+Answer:
+git bisect is used to find the commit that introduced a bug by performing a binary search between good and bad commits.
+
+5) What is Git Squash command?
+
+Answer:
+Git squash combines multiple commits into a single commit, usually during rebase, to keep commit history clean.
+
+6) What is Git Stash command?
+
+Answer:
+git stash temporarily saves uncommitted changes so you can switch branches without committing them.
+
+7) Have you ever faced merge conflicts and how did you resolve them?
+
+Answer:
+Yes. I resolved merge conflicts by identifying conflicting files, manually correcting the code, validating changes, and then committing the resolved version after testing.
+
+8) Who will create Git repositories in your project and who will tell you to create a new repository?
+
+Answer:
+Usually, DevOps leads or repository admins create repositories. New repositories are created based on requirements from project managers, architects, or DevOps leads.
+
+9) How are you managing GitHub permissions for team members?
+
+Answer:
+Permissions are managed using GitHub roles like Admin, Maintainer, Write, and Read, along with branch protection rules and team-based access.
+
+10) What is Branch Lock?
+
+Answer:
+Branch lock (branch protection) prevents direct pushes, enforces pull requests, reviews, and CI checks, ensuring code stability on critical branches like main.
+
